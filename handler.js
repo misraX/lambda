@@ -22,7 +22,7 @@ exports.list = (event, context, callback) => {
   });
 };
 
-// Detail api for all geo uploads.
+// Detail api for a geo's json file.
 exports.detail = (event, context, callback) => {
   Detail(event, (error, result) => {
     const response = makeResponse(error, result);
@@ -30,7 +30,7 @@ exports.detail = (event, context, callback) => {
   });
 };
 
-// Create api for all geo uploads.
+// Create api for a geo's json file.
 exports.create = (event, context, callback) => {
   Create(event, (error, result) => {
     const response = makeResponse(error, result);
