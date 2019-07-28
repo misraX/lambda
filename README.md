@@ -43,9 +43,10 @@ The key will be filename+uuid to uniqily define the file.
 
 Create view url:
 
-Will upload the object by it's key.
+Will upload the object by it's filename in the url,
+and the body will include the binary file.
 
-`POST` /api/geo
+`POST` /api/geo/{fileName}
 
 ### Tools used: 
 
