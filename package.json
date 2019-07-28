@@ -10,8 +10,9 @@
   "license": "MIT",
   "dependencies": {
     "aws-sdk": "^2.6.7",
-    "prettier": "^1.18.2",
     "uuid": "^3.3.2"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "prettier": "^1.18.2"
+  }
 }
