@@ -1,0 +1,15 @@
+{
+  "semi": true,
+  "overrides": [
+    {
+      "files": "js/**/*.{js,jsx}",
+      "options": {
+        "semi": true,
+        "printWidth": 120,
+        "singleQuote": true,
+        "listDifferent": true,
+        "parser": "flow"
+      }
+    }
+  ]
+}
