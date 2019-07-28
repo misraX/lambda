@@ -1,0 +1,17 @@
+{
+  "name": "serverless-geo",
+  "version": "0.0.0",
+  "description": "Serverless geo",
+  "scripts": {
+    "deploy": "serverless deploy",
+    "format": "prettier --write \"./**/*.{js,jsx}\""
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "aws-sdk": "^2.6.7",
+    "prettier": "^1.18.2",
+    "uuid": "^3.3.2"
+  },
+  "devDependencies": {}
+}

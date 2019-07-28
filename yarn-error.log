@@ -1,0 +1,48 @@
+Arguments: 
+  /home/misrax/.nvm/versions/node/v8.11.3/bin/node /usr/bin/yarn
+
+PATH: 
+  /home/misrax/bin/:/home/misrax/.local/bin:/home/misrax/.nvm/versions/node/v8.11.3/bin:/home/misrax/bin/:/home/misrax/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/home/misrax/Android/Sdk/emulator:/home/misrax/Android/Sdk/tools:/home/misrax/Android/Sdk/tools/bin:/home/misrax/Android/Sdk/platform-tools:/home/misrax/Android/Sdk/emulator:/home/misrax/Android/Sdk/tools:/home/misrax/Android/Sdk/tools/bin:/home/misrax/Android/Sdk/platform-tools
+
+Yarn version: 
+  1.16.0
+
+Node version: 
+  8.11.3
+
+Platform: 
+  linux x64
+
+Trace: 
+  SyntaxError: /home/misrax/lambda/package.json: Unexpected token } in JSON at position 151
+      at JSON.parse (<anonymous>)
+      at /usr/lib/node_modules/yarn/lib/cli.js:1625:59
+      at Generator.next (<anonymous>)
+      at step (/usr/lib/node_modules/yarn/lib/cli.js:304:30)
+      at /usr/lib/node_modules/yarn/lib/cli.js:315:13
+      at <anonymous>
+
+npm manifest: 
+  {
+      "name": "serverless-geo",
+      "version": "0.0.0",
+      "description": "Serverless geo",
+      "scripts": {
+        "deploy": "serverless deploy",
+      },
+      "author": "",
+      "license": "MIT",
+      "dependencies": {
+        "aws-sdk": "^2.6.7",
+        "js-yaml": "^3.7.0"
+      },
+      "devDependencies": {
+  
+      }
+    }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

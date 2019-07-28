@@ -1,0 +1,30 @@
+service: lambda
+
+provider:
+  name: aws
+  runtime: nodejs10.x
+
+functions:
+  geo-list:
+    handler: handler.list
+    events:
+      - http:
+          path: geo
+          method: get
+          cors: true
+
+  geo-create:
+    handler: handler.create
+    events:
+      - http:
+          path: geo
+          method: post
+          cors: true
+
+  geo-detail:
+    handler: handler.detail
+    events:
+      - http:
+          path: geo/{key}
+          method: get
+          cors: true
