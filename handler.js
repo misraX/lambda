@@ -1,14 +1,14 @@
-"use strict";
-const List = require("./api/geo/list");
-const Detail = require("./api/geo/detail");
-const Create = require("./api/geo/create");
+'use strict';
+const List = require('./api/geo/list');
+const Detail = require('./api/geo/detail');
+const Create = require('./api/geo/create');
 
 const makeResponse = (error, result) => {
   const statusCode = (error && error.statusCode) || 200;
   return {
     statusCode,
     headers: {
-      "Access-Control-Allow-Origin": "*"
+      'Access-Control-Allow-Origin': '*'
     },
     body: JSON.stringify(result)
   };

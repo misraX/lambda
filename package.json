@@ -4,7 +4,8 @@
   "description": "Serverless geo",
   "scripts": {
     "deploy": "serverless deploy",
-    "format": "prettier --write \"./**/*.{js,jsx}\""
+    "format": "prettier --write --single-quote --print-width=120 --parser=flow --tab-width=2 \"**/*.{js,jsx}\"",
+    "local:test": "lab -v -l -m 8080 tests/handler.test.js"
   },
   "author": "",
   "license": "MIT",
@@ -14,6 +15,9 @@
     "uuid": "^3.3.2"
   },
   "devDependencies": {
+    "@hapi/code": "^6.0.0",
+    "@hapi/lab": "^19.1.0",
+    "axios": "^0.19.0",
     "prettier": "^1.18.2"
   }
 }
