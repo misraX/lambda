@@ -30,11 +30,17 @@ The project had been build from scratch using serverless' `aws-nodejs` template:
 ### Project structure:
 
   API:  api/geo/{list,create,detail}.js
+
   Utils: utils/{parsers,s3}.js
+
   Tests: tests/handler.spec.js
+
   Index|Handler: handler.js
+
   PrettierIngone: .prettierignore
+
   GitIgnore: .gitigonre
+  
   S3config: s3config.js
   
 ### Project urls:
