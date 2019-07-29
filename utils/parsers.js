@@ -3,9 +3,9 @@
 const Busboy = require('busboy');
 
 /**
- * Get content type from event
+ * Get content type from event headers
  *
- * @param {*} event
+ * @param {*} headers
  * @returns
  */
 const getContentType = headers => {
