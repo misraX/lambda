@@ -20,8 +20,7 @@ const getContentType = headers => {
  * Parser for form-data using busboy
  * Promise that will resolve a lambda event.
  *
- * @param {*} body
- * @param {*} headers
+ * @param {*} event
  *
  */
 exports.formParser = event =>
