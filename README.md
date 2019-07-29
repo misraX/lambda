@@ -12,7 +12,7 @@ The project had been build from scratch using serverless' `aws-nodejs` template:
 
 `serverless create --template aws-nodejs --path lambda`
 
-Deployment: 
+### Deployment: 
 
 `serverless deploy -v` with verbosity ;)
 
@@ -22,7 +22,7 @@ Deployment:
 
 * Detail view for the uploaded file by key (filename), stream the file with an extra field for distance calculations.
 
-*Live endpoints:*                                                                                                                              
+### Live endpoints:                                                                                                                              
   GET - https://5u094xtgk8.execute-api.us-east-1.amazonaws.com/dev/geo                                                                                                          
   POST - https://5u094xtgk8.execute-api.us-east-1.amazonaws.com/dev/geo                                                                                                         
   GET - https://5u094xtgk8.execute-api.us-east-1.amazonaws.com/dev/geo/{key}
