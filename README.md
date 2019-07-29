@@ -22,9 +22,21 @@ Deployment:
 
 * Detail view for the uploaded file by key (filename), stream the file with an extra field for distance calculations.
 
+*Live endpoints:*                                                                                                                              
+  GET - https://5u094xtgk8.execute-api.us-east-1.amazonaws.com/dev/geo                                                                                                          
+  POST - https://5u094xtgk8.execute-api.us-east-1.amazonaws.com/dev/geo                                                                                                         
+  GET - https://5u094xtgk8.execute-api.us-east-1.amazonaws.com/dev/geo/{key}
 
 ### Project structure:
 
+  API:  api/geo/{list,create,detail}.js
+  Utils: utils/{parsers,s3}.js
+  Tests: tests/handler.spec.js
+  Index|Handler: handler.js
+  PrettierIngone: .prettierignore
+  GitIgnore: .gitigonre
+  S3config: s3config.js
+  
 ### Project urls:
 
 List view url:
@@ -43,19 +55,64 @@ The key will be filename+uuid to uniqily define the file.
 
 Create view url:
 
-Will upload the object by it's filename in the url,
-and the body will include the binary file.
+multipart uploads using busyboy parser.
+`POST` /api/geo
 
-`POST` /api/geo/{fileName}
+### Response format:
+
+create:
+
+onSuccess:
+
+{ data: { Key: res.Key } }
+
+onError:
+
+AWS ERROR: { statusCode: 409 }, { error: 'Error while uploading.' }
+CODE Exceptions: { statusCode: 409 }, { error: 'Error while creating an object.' }
+
+list:
+
+onSuccess:
+{
+    data: {
+        Contents: res['Contents'] ? res['Contents'] : [],
+        KeyCount: res['KeyCount'] ? res['KeyCount'] : 0
+    }
+}
+
+onError:
+
+AWS ERROR: { statusCode: 409 }, { error: 'Error while listing objects.' })
+
+detail:
+
+onSuccess:
+{
+    data: {
+        longitude: 29.978277,
+        latitude: 31.1302063,
+        distance: 2729.967613173234
+    }
+}
+
+onError:
+
+AWS ERROR: { statusCode: 409 }, { error: 'Error while getting an object.' }
+
 
 ### Tools used: 
 
 [nodejs10.x](https://nodejs.org/download/release/latest-v10.x/)
 
-[severless](https://github.com/serverless/serverless)
+[severless | Serverless Framework](https://github.com/serverless/serverless)
 
-[yarn](https://github.com/yarnpkg/yarn)
+[uuid | RFC4122 UUIDS for filenames](https://www.npmjs.com/package/uuid)
 
-[uuid](https://www.npmjs.com/package/uuid)
+[busyboy | Parse form-data](https://github.com/mscdex/busboy)
 
-[prettier](https://github.com/prettier/prettier)
+[prettier | Code formatter](https://github.com/prettier/prettier)
+
+[yarn | Package manager](https://github.com/yarnpkg/yarn)
+
+[chaijs | Testing Framework](https://github.com/chaijs/chai)

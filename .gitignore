@@ -8,3 +8,7 @@ jspm_packages
 # coverage
 coverage/
 .nyc_output/
+
+
+# json test files
+Pyramids2.json
