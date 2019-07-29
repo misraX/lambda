@@ -1,7 +1,7 @@
 'use strict';
 const uuid = require('uuid').v4;
 const AWS = require('aws-sdk');
-const S3 = new AWS.S3(require('../s3config')());
+const S3 = new AWS.S3(require('../s3Config')());
 const GeoPoint = require('geopoint');
 
 exports.uploadToS3 = (event, callback) =>
