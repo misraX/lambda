@@ -82,12 +82,14 @@ list:
 
 onSuccess:
 
-```{
+```
+{
     data: {
         Contents: res['Contents'] ? res['Contents'] : [],
         KeyCount: res['KeyCount'] ? res['KeyCount'] : 0
     }
-}```
+}
+```
 
 onError:
 
@@ -97,13 +99,15 @@ detail:
 
 onSuccess:
 
-```{
+```
+{
     data: {
         longitude: 29.978277,
         latitude: 31.1302063,
         distance: 2729.967613173234
     }
-}```
+}
+```
 
 onError:
 
