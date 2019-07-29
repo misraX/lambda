@@ -43,10 +43,9 @@ The key will be filename+uuid to uniqily define the file.
 
 Create view url:
 
-Will upload the object by it's filename in the url,
-and the body will include the binary file.
+multipart uploads using busyboy parser.
 
-`POST` /api/geo/{fileName}
+`POST` /api/geo
 
 ### Tools used: 
 
@@ -54,8 +53,10 @@ and the body will include the binary file.
 
 [severless](https://github.com/serverless/serverless)
 
-[yarn](https://github.com/yarnpkg/yarn)
-
 [uuid](https://www.npmjs.com/package/uuid)
 
+[busyboy](https://github.com/mscdex/busboy)
+
 [prettier](https://github.com/prettier/prettier)
+
+[yarn](https://github.com/yarnpkg/yarn)

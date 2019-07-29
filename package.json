@@ -11,17 +11,14 @@
   "license": "MIT",
   "dependencies": {
     "aws-sdk": "^2.6.7",
-    "jsonfile": "^5.0.0",
-    "node-fetch": "^2.6.0",
+    "busboy": "^0.3.1",
+    "geopoint": "^1.0.1",
     "uuid": "^3.3.2"
   },
   "devDependencies": {
-    "@hapi/code": "^6.0.0",
-    "@hapi/lab": "^19.1.0",
-    "axios": "^0.19.0",
     "chai": "^4.2.0",
     "mocha": "^6.2.0",
-    "nyc": "^14.1.1",
+    "node-fetch": "^2.6.0",
     "prettier": "^1.18.2"
   }
 }

@@ -1,20 +1,16 @@
 'use strict';
 
-const AWS = require('aws-sdk');
-const uuid = require('uuid/v4');
-const jsonfile = require('jsonfile');
-const S3 = new AWS.S3(require('../../s3config')());
+const uploadToS3 = require('../../utils/s3').uploadToS3;
+const formParser = require('../../utils/parsers').formParser;
 
-module.exports = (event, callback) => {
-  S3.upload(
-    {
-      Bucket: 'anon-bucket-x',
-      Key: `${uuid()}`,
-      Body: event.body
-    },
-    (err, res) => {
-      console.log(err, res);
-      callback(err, Object.assign(res, { event }));
-    }
-  );
+module.exports = async (event, callback) => {
+  try {
+    console.log('EventBeforeParser: ', event);
+    let eventParser = await formParser(event);
+    console.log('EventAfterParser: ', eventParser);
+    uploadToS3(eventParser.body, callback);
+  } catch (error) {
+    console.log('[Error Create]: ', error);
+    callback({ statusCode: 409 }, { error: 'Error while creating an object.' });
+  }
 };
