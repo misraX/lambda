@@ -120,6 +120,8 @@ AWS ERROR: `{ statusCode: 409 }, { error: 'Error while getting an object.' }`
 
 [busyboy | Parse form-data](https://github.com/mscdex/busboy)
 
+[geopoint | Distance calculations](https://github.com/davidwood/node-geopoint)
+
 [prettier | Code formatter](https://github.com/prettier/prettier)
 
 [yarn | Package manager](https://github.com/yarnpkg/yarn)
