@@ -40,7 +40,7 @@ The project had been build from scratch using serverless' `aws-nodejs` template:
   PrettierIngone: .prettierignore
 
   GitIgnore: .gitigonre
-  
+
   S3config: s3config.js
   
 ### Project urls:
@@ -70,41 +70,44 @@ create:
 
 onSuccess:
 
-{ data: { Key: res.Key } }
+`{ data: { Key: res.Key } }`
 
 onError:
 
-AWS ERROR: { statusCode: 409 }, { error: 'Error while uploading.' }
-CODE Exceptions: { statusCode: 409 }, { error: 'Error while creating an object.' }
+AWS ERROR: `{ statusCode: 409 }, { error: 'Error while uploading.' }`
+
+CODE Exceptions: `{ statusCode: 409 }, { error: 'Error while creating an object.' }`
 
 list:
 
 onSuccess:
-{
+
+```{
     data: {
         Contents: res['Contents'] ? res['Contents'] : [],
         KeyCount: res['KeyCount'] ? res['KeyCount'] : 0
     }
-}
+}```
 
 onError:
 
-AWS ERROR: { statusCode: 409 }, { error: 'Error while listing objects.' })
+AWS ERROR: `{ statusCode: 409 }, { error: 'Error while listing objects.' })`
 
 detail:
 
 onSuccess:
-{
+
+```{
     data: {
         longitude: 29.978277,
         latitude: 31.1302063,
         distance: 2729.967613173234
     }
-}
+}```
 
 onError:
 
-AWS ERROR: { statusCode: 409 }, { error: 'Error while getting an object.' }
+AWS ERROR: `{ statusCode: 409 }, { error: 'Error while getting an object.' }`
 
 
 ### Tools used: 
